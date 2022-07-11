@@ -1,0 +1,40 @@
+* {
+	background-color: #d1e7dd;
+}
+
+h1 {
+	font-weight: 500;
+	line-height: 1.2;
+	    background-color: #bcd0c7;
+}
+
+.body container-fluid{
+	background-color: #d1e7dd;
+}
+
+body {
+	background-color: #d1e7dd;
+}
+
+.title {
+	width: 100%;
+	text-align: center;
+    background-color: #bcd0c7;
+        margin-bottom: 28px;
+    padding: 1rem;
+}
+
+.form-label {
+	font-weight: bold;
+}
+
+.col-7 {
+	margin-left: 27rem;
+	margin-top: 5rem;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled),
+	button:not(:disabled) {
+	cursor: pointer;
+	margin-left: 27rem;
+}
