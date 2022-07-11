@@ -28,7 +28,7 @@
              </div>
               <div class="col-7">
                 <label for="inputMobile" class="form-label">Enter Your Mobile Number</label>
-                <input type="text" class="form-control" placeholder="Enter Your Mobile Number" name="mobile" value="${stud.mobile}" minlength="10" maxlength="10" required
+                <input type="tel" class="form-control" placeholder="Enter Your Mobile Number" name="mobile" value="${stud.mobile}" minlength="10" maxlength="10" required
 		      		pattern="[7-9]{1}[0-9]{9}" > 
              </div>
                <div class="col-7">
