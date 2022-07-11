@@ -74,8 +74,7 @@ public class StudentServlet extends HttpServlet {
 	}
 
 	protected void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/data/student_edit.jsp");
-//        dispatcher.forward(request, response);
+
 		int studentid = Integer.parseInt(request.getParameter("id"));
 		Student stud = null;
 		for (Student student : list) {
@@ -114,18 +113,6 @@ public class StudentServlet extends HttpServlet {
 
 	protected void delete(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-//        int studentid = Integer.parseInt(request.getParameter("id"));
-//        Student stud = null;
-//        for (Student student : list) {
-//            if (studentid == student.getId()) {
-//                stud = student;
-//                break;
-//            }
-//        }
-//        if (stud != null) {
-//            list.remove(stud);
-//        }
-//DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/mytest", "root", "root");
@@ -139,27 +126,6 @@ public class StudentServlet extends HttpServlet {
 		response.sendRedirect("studentdb?type=view");
 	}
 
-//    protected void muldelete(HttpServletRequest request, HttpServletResponse response)
-//              throws ServletException, IOException {
-//        String[] ids = request.getParameterValues("ids");
-//        for (String id : ids) {
-//            System.out.println("id " + id);
-//            if () {
-//            }
-//        }
-//        int studentid = Integer.parseInt(request.getParameter("id"));
-//        Student stud = null;
-//        for (Student student : list) {
-//            if (studentid == student.getId()) {
-//                stud = student;
-//                break;
-//            }
-//        }
-//        if (stud != null) {
-//            list.remove(stud);
-//        }
-//        response.sendRedirect("studentdb?type=view");
-//    }
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -201,22 +167,7 @@ public class StudentServlet extends HttpServlet {
 			} catch (Exception e) {
 				System.out.println(e);
 			}
-			
-//	            // method 1
-//	            for (String id : ids) {
-//	                System.out.println("id " + id);
-//	                try {
-//	                    Class.forName("com.mysql.jdbc.Driver");
-//	                    Connection con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/mytest",
-//	                              "root", "root");
-//	                    Statement stmt = con1.createStatement();
-//	                    stmt.execute("DELETE FROM customer where id='" + id + "'");
-//	                    stmt.close();
-//	                    con1.close();
-//	                } catch (Exception e) {
-//	                    System.out.println(e);
-//	                }
-//	            }
+
 			response.sendRedirect("studentdb?type=view");
 		}
 	}
